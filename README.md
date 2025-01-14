@@ -22,38 +22,38 @@ Una vez instalado Docker y su respectivo Docker Compose, debemos encontrar la im
 
 Una vez encontremos la documentacion necesaria, dentro buscamos los comandos de instalación de la versión deseada:
 
-![Imagen de la documentación]()
+![Imagen de la documentación](/Images/01.png)
 
 Ahora dentro de la página web, encontramos un docker compose que nos puede servir como plantilla para iniciar nuestro servicio con los valores que nosotros necesitemos
 
-![Imagen del docker compose]()
+![Imagen del docker compose](/Images/02.png)
 
 Una vez copiado el docker compose, vamos a crear de manera local desde la consola de comandos nuestro nuevo archivo docker-compose.yml, luego introduciremos dentro el contenido del docker compose que encontramos en el DockerHub
 
-![Imagen del nuevo Docker Compose]()
+![Imagen del nuevo Docker Compose](/Images/03.png)
 
 Finalmente para instalar e iniciar el servicio iniciamos la imagen con el comando **"sudo docker-compose up -d"**
 
-![Imagen del lanzamiento del Docker Compose]()
+![Imagen del lanzamiento del Docker Compose](/Images/04.png)
 
 # 2. Creación de la base de datos
 
 Una vez instalado y iniciado el servicio, vamos a entrar en odoo desde localhost, lo cual nos permite iniciar sesión con todos los datos que pusimos en el propio docker compose
 
-![Imagen de inicio de sesión en el Odoo]()
+![Imagen de inicio de sesión en el Odoo](/Images/05.png)
 
 Para confirmar que se cree correctamente la base de datos, una vez estemos dentro selecionamos un módulo, en mi caso seleccioné ventas
 
-![Imagen de los módulos]()
+![Imagen de los módulos](/Images/06.png)
 
 # 3. Conexión con la base de datos
 
 Para comprobar la base de datos, entramos desde localhost al otro puerto dedicado a PGAdmin, dentro podemos entrar con los datos que de nuevo, están determinados en el propio docker compose
 
-![Imagen entrada PGAdmin]()
+![Imagen entrada PGAdmin](/Images/07.png)
 
 Una vez dentro del pgadmin, podemos añadir manualmente la base de datos que crea Odoo y acceder a ella
 
-![Imagen Base de datos Odoo]()
+![Imagen Base de datos Odoo](/Images/08.png)
 
 
