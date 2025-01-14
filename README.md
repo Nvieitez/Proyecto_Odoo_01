@@ -58,14 +58,14 @@ Una vez dentro del pgadmin, podemos añadir manualmente la base de datos que cre
 
 # Preguntas Teóricas
 
-1. ¿Que ocurre si en el ordenador local el puerto 5432 está ocupado?
+**1. ¿Que ocurre si en el ordenador local el puerto 5432 está ocupado?**
 
-    En caso de el puerto 5342 estar ocupado la base de dstos de postgres no podría iniciarse correctamente, lo que impediría que Odoo se pueda conectar y perdiendo información
+En caso de el puerto 5342 estar ocupado la base de dstos de postgres no podría iniciarse correctamente, lo que impediría que Odoo se pueda conectar y perdiendo información
 
-2. ¿Y si lo estuviese el 8069?
+**2. ¿Y si lo estuviese el 8069?**
 
-    En caso de el puerto 8069 estar ocupado (En mi caso el 8055) Odoo no podría iniciar correctamente, lo que impediría al usuario entrar en la interfaz gráfica de la misma y dejando 
+En caso de el puerto 8069 estar ocupado (En mi caso el 8055) Odoo no podría iniciar correctamente, lo que impediría al usuario entrar en la interfaz gráfica de la misma y dejando 
 
-3. ¿Como puedes solucionarlo?
+**3. ¿Como puedes solucionarlo?**
 
-    Para evitar o arreglar estos problemas, solamente debemos cambiar el puerto asegurando que el nuevo que elijamos no esté ocupado o en uso, como fué mi caso, en vez de usar el puerto 8069 utilicé el 8055
+Para evitar o arreglar estos problemas, solamente debemos cambiar el puerto asegurando que el nuevo que elijamos no esté ocupado o en uso, como fué mi caso, en vez de usar el puerto 8069 utilicé el 8055
