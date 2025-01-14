@@ -5,7 +5,6 @@ Este proyecto va a tratar la instalación de la versión 17 community edition de
 Para llevar este proyecto a cabo, vamos a tratar los siguientes temas:
 
     - Instalación de Odoo 17 Community Edition
-    - Instalación de PgAdmin
     - Creación de la base de datos
     - Conexión con la base de datos
     
@@ -37,5 +36,14 @@ Finalmente para instalar e iniciar el servicio iniciamos la imagen con el comand
 
 ![Imagen del lanzamiento del Docker Compose]()
 
+# 2. Creación de la base de datos
+
+Una vez instalado y iniciado el servicio, vamos a entrar en odoo desde localhost, lo cual nos permite iniciar sesión con todos los datos que pusimos en el propio docker compose
+
+![Imagen de inicio de sesión en el Odoo]()
+
+Para confirmar que se cree correctamente la base de datos, una vez estemos dentro selecionamos un módulo, en mi caso seleccioné ventas
+
+![Imagen de los módulos]()
 
 
