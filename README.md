@@ -46,4 +46,14 @@ Para confirmar que se cree correctamente la base de datos, una vez estemos dentr
 
 ![Imagen de los módulos]()
 
+# 3. Conexión con la base de datos
+
+Para comprobar la base de datos, entramos desde localhost al otro puerto dedicado a PGAdmin, dentro podemos entrar con los datos que de nuevo, están determinados en el propio docker compose
+
+![Imagen entrada PGAdmin]()
+
+Una vez dentro del pgadmin, podemos añadir manualmente la base de datos que crea Odoo y acceder a ella
+
+![Imagen Base de datos Odoo]()
+
 
