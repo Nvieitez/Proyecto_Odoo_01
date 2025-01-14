@@ -1,0 +1,60 @@
+version: '3.7'
+
+services:
+  odoo:
+    # Imagen de Odoo versión 17.0
+    image: odoo:17.0
+    depends_on:
+      # Odoo depende del servicio de la base de datos (db)
+      - db
+    restart: unless-stopped  # Reinicia el contenedor a menos que se detenga manualmente
+    ports:
+      # Mapea el puerto 8069 del contenedor al puerto 8055 de la máquina host
+      - "8055:8069"
+    environment:
+      # Variables de entorno necesarias para la configuración de Odoo y la base de datos
+      HOST: db
+      USER: admin
+      PASSWORD: pswd
+      PGHOST: db
+      PGPORT: 5432
+      PGUSER: admin
+      PGPASSWORD: pswd
+    volumes:
+      # Volumen para el almacenamiento persistente de datos de Odoo
+      - odoo-data:/var/lib/odoo
+
+  db:
+    # Imagen de PostgreSQL
+    image: postgres
+    restart: unless-stopped  # Reinicia el contenedor a menos que se detenga manualmente
+    environment:
+      # Variables de entorno necesarias para la configuración de la base de datos PostgreSQL
+      POSTGRES_DB: postgres
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: pswd
+      PGDATA: /var/lib/postgresql/data/pgdata  # Ruta para el almacenamiento de datos persistente
+    volumes:
+      # Volumen para el almacenamiento persistente de datos de PostgreSQL
+      - odoo-db-data:/var/lib/postgresql/data/pgdata
+
+  pgadmin:
+    # Imagen de PgAdmin 4
+    image: dpage/pgadmin4
+    depends_on:
+      # PgAdmin depende del servicio de la base de datos (db)
+      - db
+    restart: unless-stopped  # Reinicia el contenedor a menos que se detenga manualmente
+    ports:
+      # Mapea el puerto 80 del contenedor al puerto 8080 de la máquina host
+      - "8080:80"
+    environment:
+      # Variables de entorno necesarias para la configuración de PgAdmin
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_LISTEN_PORT: 80
+
+volumes:
+  # Define los volúmenes para el almacenamiento persistente de datos
+  odoo-db-data:
+  odoo-data:
